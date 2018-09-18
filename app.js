@@ -102,6 +102,12 @@ let mouseButtonPressed = (event, index) => {
  * @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
  */
 
+let convertToLarger = (num, conv) => num / conv;
+
+let msToTotalSeconds = (mil, sec) => convertToLarger(mil,1000);
+let msToTotalMinutes = (mil, min) => msToTotalSeconds(mil) / 60;
+let msToTotalHours = (mil, hrs) => msToTotalMinutes(mil) / 60;
+
 /**
  * Given a number of milliseconds from midnight, returns the second (0 to 60) for the displayed time
  * @param {number} num the number of milliseconds to convert to seconds
